@@ -1,0 +1,45 @@
+Main class
+
+package com.company;
+
+public class Main {
+
+    public static void main(String[] args) {
+
+        Cost_of_Loan costing = new Cost_of_Loan(23,400);
+        System.out.println("The Principal is $" + costing.getPrincipal());
+        System.out.println("The Interest rate is :" + costing.getCost() + "% ");
+        System.out.println("The Total Interest calculated from the principal $" + costing.getCostLoan());
+    }
+}
+constructor class
+package com.company;
+
+public class Cost_of_Loan {
+
+    double principal;
+    double cost;
+
+    public double getCostLoan() {
+        return ((cost / 100) * principal);
+    }
+
+    Cost_of_Loan (double c, double p) {
+        cost = c;
+        principal = p;
+    }
+
+    public double getCost() {
+        return cost;
+    }
+    public double getPrincipal() {
+        return principal;
+    }
+
+    public void setCost(double cost) {
+        this.cost = cost;
+    }
+    public void setPrincipal(double principal) {
+        this.principal = principal;
+    }
+}
